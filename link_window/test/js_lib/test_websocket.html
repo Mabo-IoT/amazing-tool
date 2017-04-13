@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket demo</title>
+        <script type="application/javascript" src="table_maker.js"></script>
+    </head>
+    <body>
+    <div id="table-contain"></div>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:5678/");
+
+                ws.onmessage = function (event) {
+                data_to_table(event.data)
+            };
+        </script>
+    </body>
+</html>
