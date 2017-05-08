@@ -10,7 +10,7 @@ import subprocess
 import glob
 
 class CommandWorker(object):
-    cmd_pattern = ['pip install {}', ]
+    cmd_pattern = ['pip install {} --no-index --find-links=.', ]
 
     def __init__(self):
         parser = argparse.ArgumentParser(description='one key to install current directory.')
