@@ -6,6 +6,6 @@ sed -i -e 's|/home/<USER>|/root|' /etc/systemd/system/vncserver@:1.service;
 sed -i -e 's|<USER>|root|' /etc/systemd/system/vncserver@:1.service;
 systemctl daemon-reload;
 firewall-cmd --permanent --add-service vnc-server;
-firewall-cmd --coplete-reload;
+firewall-cmd --complete-reload;
 systemctl enable vncserver@:1;
 echo "\nOK, let's start the vnc-server"
